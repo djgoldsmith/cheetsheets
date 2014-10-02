@@ -1,0 +1,59 @@
+* Beginning Github
+
+* Getting started
+For this we are going to use the github interface
+
+** Create a new repository
+ - Click the + Next to your username
+ - Name the resository etc.
+ - Hit Create.
+
+** Make the first checkout
+You can find the URL for your new reposotiry on the bottom right of the screen.
+*** Linux / Git Bash
+
+#+begin_src bash
+git clone <url>
+#+end_src
+
+* Semi Advanced stuff
+* TODO Issues (Bug lists)
+When you find a bug it is good form to document it.
+
+- Click the issues tab
+- Search to see if the issue already exists
+  - Click new issues
+  - Give an new issue and title.
+  - Complete the issue details.
+
+** TODO What makes a poor bug report:
+- 'Code does not work'
+- 'I cant do X'
+- 'Does not compile'
+
+** TODO What makes a good issue:
+A clear description of the problem will help developers create a fix.
+
+
+
+* Branches
+Give us a way to structure how we work on different parts of the repostory at the same time.
+And example of this would be the following branch structue:
+
+ - master (the 'stable' codebase
+ - development (where development takes place)
+   - Feature Branches
+
+** Creating Branches in github
+- Click drop down tht says branch:master at the top of the filelist
+- Type a new branch name
+- Hit Create (or enter)
+
+
+
+
+
+
+
+* Things to look at
+- Adding SSH keys to your account
