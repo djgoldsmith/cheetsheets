@@ -23,3 +23,21 @@ Scales fonts so they are sensible on the Monitor
 dotXresources
 
 From: ~/.Xresources
+
+## email
+
+from the Home dir
+
+ .davmail
+ .mbsyncrc
+ 
+ .mbsyncrcpass.gpg goes in .emacs.d
+ 
+ remotes is part of /etc/nullmailer (Be use to put password back)
+
+## Radare 
+
+## Herbsluft / Powerbar
+
+
+
