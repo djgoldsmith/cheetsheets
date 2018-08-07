@@ -1,0 +1,56 @@
+#Expunge None
+#Create Both
+
+IMAPStore work
+Host outlook.office365.com
+User aa9863@coventry.ac.uk
+SSLType IMAPS
+PassCmd "gpg --quiet --for-your-eyes-only --decrypt $HOME/.emacs.d/.mbsyncpass.gpg"
+
+MaildirStore local-work
+Path ~/Maildir/work/
+Inbox ~/Maildir/work/INBOX
+SubFolders Verbatim
+Trash "Deleted Items"
+
+#Create and Remove Inboxes on machines (Possibly Both)
+Create Both
+Remove Slave
+
+#What to sync (Pull, then Push)
+Sync All
+#Delete all messages marked for deltion (we need to play here)
+Expunge Both
+
+#Whare to save the sync files (In local directories)
+SyncState *
+
+
+Channel work-inbox
+Master :work:
+Slave :local-work:
+Patterns "Drafts" "Deleted Items" "INBOX" "Sent Items"
+
+Channel work-nepal
+Master :work:
+Slave :local-work:
+Patterns "Nepal"
+
+Channel work-archives
+Master :work:
+Slave :local-work:
+Patterns "Archive*"
+
+Channel work-zero
+Master :work:
+Slave :local-work:
+Patterns "Zero*"
+
+
+Group work
+Channel work-inbox
+Channel work-nepal
+Channel work-archives
+Channel work-zero
+
+#Channel work-archives-18
