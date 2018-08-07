@@ -10,7 +10,7 @@ A place for me to keep all of my cheetsheets and notes.
 Various ones here,
 
  - dotEmacs
- - custom
+ - custom Mirror of .emacs.d/custom
     - dg-general.el   Emacs setup etc
 	- dg-mu.el  Mu4e Specific Stuff
 	- dg-org.el Org Specific Stuff
