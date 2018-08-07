@@ -15,3 +15,11 @@ Various ones here,
 	- dg-mu.el  Mu4e Specific Stuff
 	- dg-org.el Org Specific Stuff
 	- dg-package.el  Package Managemenet
+
+## Xorg
+
+Scales fonts so they are sensible on the Monitor
+
+dotXresources
+
+From: ~/.Xresources

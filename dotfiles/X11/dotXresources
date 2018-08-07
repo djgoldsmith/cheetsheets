@@ -1,0 +1,12 @@
+! Fonts {{{
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.hintstyle: hintfull
+Xft.dpi:       220
+! }}}
+
+xterm*faceName: DajaVu Sans Mono
+xterm*faceSize: 10
+xterm*renderFont: true
+XTerm*selectToClipboard: true
