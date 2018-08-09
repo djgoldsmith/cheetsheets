@@ -4,11 +4,11 @@
 ;;Kill the start screen
 (setq inhibit-splash-screen t)
 
-;(add-to-list 'default-frame-alist
-;             '(font . "Hack Nerd Font Mono"))
-
 (add-to-list 'default-frame-alist
              '(font . "Hack"))
+
+;;20pt font (for the smaller screen)
+(set-face-attribute 'default nil :height 200)
 
 ;;Load nicer theme
 (load-theme 'cyberpunk t)
