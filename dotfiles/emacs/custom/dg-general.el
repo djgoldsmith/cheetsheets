@@ -4,8 +4,11 @@
 ;;Kill the start screen
 (setq inhibit-splash-screen t)
 
+;(add-to-list 'default-frame-alist
+;             '(font . "Hack Nerd Font Mono"))
+
 (add-to-list 'default-frame-alist
-             '(font . "Hack Nerd Font Mono"))
+             '(font . "Hack"))
 
 ;;Load nicer theme
 (load-theme 'cyberpunk t)
