@@ -9,7 +9,7 @@
 
 
 
-;;(package-initialize)
+(package-initialize)
 
 ;;Our List of packages to install
 (setq dg-packages
