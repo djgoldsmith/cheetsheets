@@ -32,7 +32,7 @@ hc keybind $Mod-Shift-s spawn i3lock -c 444444
 #Cooupple of customer extras
 #i3 Like Win-D
 #hc keybind $Mod-d spawn dmenu_run
-hc keybind $Mod-d spawn rofi -show run
+hc keybind $Mod-d spawn rofi -location 2 -show run
 hc keybind $Mod-Return spawn ${TERMINAL:-xterm} # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-e spawn emacs
 
