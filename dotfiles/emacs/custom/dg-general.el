@@ -4,11 +4,9 @@
 ;;Kill the start screen
 (setq inhibit-splash-screen t)
 
+;;Set the Font to 20 For this screen
 (add-to-list 'default-frame-alist
-             '(font . "Hack"))
-
-;;20pt font (for the smaller screen)
-(set-face-attribute 'default nil :height 200)
+             '(font . "Hack-20"))
 
 ;;Load nicer theme
 (load-theme 'cyberpunk t)
