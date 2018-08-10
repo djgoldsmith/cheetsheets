@@ -12,6 +12,9 @@ hc emit_hook reload
 #xsetroot -solid '#333333'
 #feh --bg-scale /home/dang/.config/herbstluftwm/descent.jpg
 
+# PAdding at the top of the frame so polybar doennt cover everytihing
+herbstclient pad 0 50 0 0
+
 # remove all existing keybindings
 hc keyunbind --all
 
@@ -28,9 +31,10 @@ hc keybind $Mod-Shift-s spawn i3lock -c 444444
 
 #Cooupple of customer extras
 #i3 Like Win-D
-hc keybind $Mod-d spawn dmenu_run
+#hc keybind $Mod-d spawn dmenu_run
+hc keybind $Mod-d spawn rofi -show run
 hc keybind $Mod-Return spawn ${TERMINAL:-xterm} # use your $TERMINAL with xterm as fallback
-hc keybind $Mod-e spawn emacs-snapshot
+hc keybind $Mod-e spawn emacs
 
 
 ## ------------------- STADNARD WINDOW MANAGEMENT CRUFT ----------------
@@ -63,7 +67,7 @@ hc keybind $Mod-o       split   right   0.5
 hc keybind $Mod-Control-space split explode
 
 # resizing frames
-resizestep=1.0
+resizestep=0.05
 hc keybind $Mod-Control-h       resize left +$resizestep
 hc keybind $Mod-Control-j       resize down +$resizestep
 hc keybind $Mod-Control-k       resize up +$resizestep
@@ -73,6 +77,7 @@ hc keybind $Mod-Control-Down    resize down +$resizestep
 hc keybind $Mod-Control-Up      resize up +$resizestep
 hc keybind $Mod-Control-Right   resize right +$resizestep
 
+# tags
 # tags
 tag_names=( {1..9} )
 tag_keys=( {1..9} 0 )
@@ -144,7 +149,7 @@ hc attr theme.active.outer_color '#3E4A00'
 hc attr theme.background_color '#141414'
 #hc attr theme.background_color '#111111'
 
-hc set window_gap 25
+hc set window_gap 10
 hc set frame_padding 0
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
@@ -177,32 +182,8 @@ hc detect_monitors
 ### DG ---- Get application started
 
 
-# find the panel
-panel=~/.config/herbstluftwm/panel.sh
-[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
-for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
-   # start it on each monitor
-   "$panel" $monitor &
-done
 
-
-#hc spawn /home/dang/.config/herbstluftwm/autorun_application "polybar example"
-#hc spawn /home/dang/.config/herbsluftwm/autorun_application "polybar example"
-#i3status | dzen2 -y -1 -fn "-misc-fixed-medium-r-normal--24-120-75-75-C-70-iso8859-1" -xs 0 &
-#poly=
-hc spawn ~/.config/herbstluftwm/runpoly
-hc spawn /usr/bin/nitrogen --restore
-# A Tray?
-pgrep nm-applet || nm-applet &
-
-#find the tray
-#tray=~/.config/herbstluftwm/tray.sh
-#for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
-#    # start it on each monitor
-#    "$tray" $monitor &
-#done
-
-#pgrep tray.sh || ~/.config/herbstluftwm/tray.sh
-
-
+#Polybar
+#hc spawn ~/.config/herbstluftwm/runpoly
+#hc spawn /usr/bin/nitrogen --restore
 
