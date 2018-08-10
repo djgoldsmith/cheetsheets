@@ -4,7 +4,7 @@
 ;(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
 
 ;;location of my maildir
-(setq mu4e-maildir (expand-file-name "~/Maildir/work"))
+(setq mu4e-maildir (expand-file-name "~/Maildir"))
 (setq mu4e-sent-folder "/Sent Items")
       ;; mu4e-sent-messages-behavior 'delete ;; Unsure how this should be configured
 (setq mu4e-drafts-folder "/Drafts")
@@ -15,7 +15,7 @@
 ;;(setq mu4e-get-mail-command "true")
 ;; use this to sync with mbsync
 (setq mu4e-get-mail-command "mbsync work")
-(setq mu4e-update-interval 300)
+;;(setq mu4e-update-interval 300)
 ;;rename files when moving
 ;;NEEDED FOR MBSYNC
 (setq mu4e-change-filenames-when-moving t)

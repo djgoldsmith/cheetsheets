@@ -7,9 +7,10 @@ User aa9863@coventry.ac.uk
 SSLType IMAPS
 PassCmd "gpg --quiet --for-your-eyes-only --decrypt $HOME/.emacs.d/.mbsyncpass.gpg"
 
+#Trailing Slash on Maildir is Important
 MaildirStore local-work
-Path ~/Maildir/work/
-Inbox ~/Maildir/work/INBOX
+Path ~/Maildir/
+Inbox ~/Maildir/INBOX
 SubFolders Verbatim
 Trash "Deleted Items"
 
@@ -29,7 +30,12 @@ SyncState *
 Channel work-inbox
 Master :work:
 Slave :local-work:
-Patterns "Drafts" "Deleted Items" "INBOX" "Sent Items"
+Patterns "INBOX"
+
+Channel work-other
+Master :work:
+Slave :local-work:
+Patterns "Drafts" "Deleted Items" "Sent Items"
 
 Channel work-nepal
 Master :work:
@@ -49,8 +55,9 @@ Patterns "Zero*"
 
 Group work
 Channel work-inbox
+Channel work-other
 Channel work-nepal
 Channel work-archives
 Channel work-zero
 
-#Channel work-archives-18
+# #Channel work-archives-18

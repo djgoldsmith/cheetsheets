@@ -12,7 +12,7 @@
 (require 'dg-package)
 (require 'dg-general)
 (require 'dg-org)
-;(require 'dg-mu)
+(require 'dg-mu)
 
 
 (custom-set-variables
