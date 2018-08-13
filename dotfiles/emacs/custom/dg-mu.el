@@ -39,13 +39,22 @@
  ;;    "http://www.example.com\n")
 )
 
+(setq message-send-mail-function 'smtpmail-send-it
+      smtpmail-starttls-credentials
+      '(("localhost" 1025 nil nil))
+      smtpmail-default-smtp-server "localhost"
+      smtpmail-smtp-server "localhost"
+      smtpmail-smtp-service 1025
+      smtpmail-debug-info t)
 
 ;;(setq send-mail-function 'smtpmail-send-it);
+
+
 
 ;;'(smtpmail-smtp-server "localhost")
 ;;'(smtpmail-smtp-service 1025))
 
-(setq message-send-mail-function 'message-send-mail-with-sendmail)
+;;(setq message-send-mail-function 'message-send-mail-with-sendmail)
 
 
 ;; (setq mu4e-sent-messages-behavior 'delete)

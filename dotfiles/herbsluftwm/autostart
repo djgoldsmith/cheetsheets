@@ -184,6 +184,6 @@ hc detect_monitors
 
 
 #Polybar
-#hc spawn ~/.config/herbstluftwm/runpoly
+hc spawn ~/.config/herbstluftwm/runpoly
 #hc spawn /usr/bin/nitrogen --restore
 
