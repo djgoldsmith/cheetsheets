@@ -4,6 +4,12 @@
 ;;Kill the start screen
 (setq inhibit-splash-screen t)
 
+;;Use a different spelling checker
+(setq ispell-program-name (executable-find "hunspell"))
+;(setq ispell-local-dictonary "uk")
+
+;(setq ispell-program-name (executable-find "aspell"))
+;(setq ispell-extra-args '("--sug-mode=ultra" "--lang=uk"))
 ;;Set the Font to 20 For this screen
 (add-to-list 'default-frame-alist
              '(font . "Hack-20"))
