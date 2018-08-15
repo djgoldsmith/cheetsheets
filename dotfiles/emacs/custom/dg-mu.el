@@ -15,7 +15,7 @@
 ;;(setq mu4e-get-mail-command "true")
 ;; use this to sync with mbsync
 (setq mu4e-get-mail-command "mbsync work")
-;;(setq mu4e-update-interval 300)
+(setq mu4e-update-interval 300)
 ;;rename files when moving
 ;;NEEDED FOR MBSYNC
 (setq mu4e-change-filenames-when-moving t)
