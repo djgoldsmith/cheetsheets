@@ -18,18 +18,36 @@
 ;=====================================================
 
 [colors]
+; --- ORIGIANL ------
 ;background = ${xrdb:color0:#222}
-background = #222
 ;background = #200
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+;background-alt = #444
+;foreground = #dfdfdf
 ;foreground-alt = #555
-foreground-alt = #8f8f8f
-primary = #ffb52a
-secondary = #e60053
+;primary = #ffb52a
+;secondary = #e60053
+;alert = #bd2c40
+
+; --------- BORROWED FROM Tango https://en.wikipedia.org/wiki/Tango_Desktop_Project
+;Main Bar Color (Dark Aluminium)
+background = #2e3436
+;No Idea
+background-alt = #A00
+;Text Color (Mid Aluminium)
+foreground = #d3d7cf 
+;Logos etc (Light Aluminium)
+foreground-alt = #babdb6
+
+;Doenst Appear to be used
+primary = #A00
+;And agin not used
+secondary = #A00
+;No Idea Doesnt appeart to be used
 alert = #bd2c40
 
+;Some More Custom For me
+skyBlue = #729FCF
+skyBlueDark = #204a87
 
 [bar/dgbar]
 
@@ -79,7 +97,6 @@ tray-padding = 30
 
 ;wm-restack = bspwm
 ;wm-restack = i3
-
 ;override-redirect = true
 
 cursor-click = pointer
@@ -426,7 +443,7 @@ monitor = ${env:MONITOR:DP-1-2}
 monitor-strit = true
 
 width = 100%
-height = 35
+height = 30
 ;offset-x = 1%
 ;offset-y = 10%
 radius = 6.0
@@ -447,11 +464,11 @@ padding-right = 2
 module-margin-left = 4
 module-margin-right = 0
 
-font-0 = Hack Nerd Font:size=18:style=Bold
+font-0 = Hack Nerd Font:size=12:style=Bold
 
 modules-left = ewmh
 ;modules-center = xwindow
-modules-center = my-text-label
+;modules-center = my-text-label
 modules-right = date
 ;modules-right = memory cpu wlan battery temperature date
 
@@ -513,34 +530,38 @@ label-monitor = %name%
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-
-label-active = %icon% %name%
-label-active-foreground = #ffffff
-label-active-background = #3f3f3f
-label-active-underline = #fba922
+;label-active = %icon% %name%
+label-active =%name%
+label-active-foreground = ${colors.foreground}
+label-active-background = ${colors.skyBlueDark}
+label-active-underline = ${colors.skyBlue}
 
 ; Available tokens:
 ;   %name%
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-occupied = %icon% %name%
+label-occupied = %icon% %name% OC
 label-occupied-underline = #555555
 
 ; Available tokens:
 ;   %name%
 ;   %icon%
 ;   %index%
-; Default: %icon%  %name%
-label-urgent = %icon% %name%
+; Default: %icon%  %name% 
+label-urgent = %icon% %name% AV 
 label-urgent-foreground = #000000
 label-urgent-background = #bd2c40
 label-urgent-underline = #9b0a20
 
+
+; It looks Like Label Empty is the current non focused one
 ; Available tokens:
 ;   %name%
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-empty = %icon% %name%
-label-empty-foreground = #55
+;label-empty = %icon% %name%
+label-empty =%name%
+;Text
+label-empty-foreground = ${colors.foreground-alt}
